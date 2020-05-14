@@ -1,0 +1,103 @@
+.results{
+    width: 100vw;
+    height: 100vw;
+     display: grid; 
+   
+ 
+     grid-template-areas:" b";
+                         
+
+}
+
+.box{
+    align-content: start;
+    justify-content: end;
+    width: 80%;
+    height: 80%;
+     grid-template-columns:1fr 1fr 1fr ;
+     grid-template-rows: 1fr ;
+    /* box-shadow:1px 1px 1px 1px  #74b9ff; */
+     grid-area: "b";
+     display: grid;
+     grid-gap:0px;
+     grid-template-areas: "i t p"
+                          "i n c";
+}
+
+
+
+.input{
+    font-family: 'Major Mono Display', monospace;
+    border: none;
+    border-bottom: 2px solid #ecf0f1;
+    padding: 30px;
+}
+
+.fa-search{
+  color: #ecf0f1;
+}
+
+.fa-minus-circle{
+  color: #d63031; 
+  grid-area: i;  
+  align-self: center;
+}
+
+body{
+    background-color: #0984e3;
+    font-family: 'Major Mono Display', monospace;
+}
+
+.input{
+    font-family: 'Major Mono Display', monospace;
+    background-color: #0984e3;
+    color: #ecf0f1;
+}
+::placeholder{
+    font-family: 'Major Mono Display', monospace;
+    color: #ecf0f1;
+}
+
+.fa-plus-circle{
+    color : #fab1a0;
+    grid-area: i;
+    align-self: center;
+}
+
+p{
+   color : #ecf0f1 ;
+}
+
+.temp{
+    position: relative;
+    grid-area: t;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 50px;
+    align-self: end;
+    bottom: 9px;
+}
+
+.name{
+    font-family: 'Major Mono Display', monospace;
+    grid-area: n;
+    align-self: flex-start;
+    font-size: small ;
+    color : #ecf0f1 ;
+}
+.pic{
+    font-family: 'Major Mono Display', monospace;
+    grid-area: p;
+    align-self: center;
+    justify-self: start;
+    /* height: 30px; */
+}
+
+.condition{
+    grid-area: c;
+    position: relative;
+    left:0px ;
+    font-family: 'Major Mono Display', monospace;
+    font-size: small ;
+    bottom: 13.5px;
+    
+}

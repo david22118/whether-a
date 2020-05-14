@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WHETHER WEATHER APP</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <script id="city-template" type="text/x-handlebars-template">
+      {{#each city}}
+      <div class="box" data-id="{{name}}">
+      <p  data-id="{{temperature}}" class="temp">{{temperature}} <span>°c </span></p> 
+      <label data-id="{{name}}" class="name">{{name}}</label><span> <p data-id="{{condition}}" class="condition">{{condition}}</p></span>
+      <img data-id="{{conditionPic}}" class="pic" 
+         src="http://openweathermap.org/img/wn/{{conditionPic}}@2x.png">
+
+     
+      
+    {{#if isSave}}
+      <i class="fas fa-minus-circle"></i>
+      {{else}}
+      <i class="fas fa-plus-circle"></i>
+      {{/if}}
+       
+    </div>
+      {{/each}}
+      </script>
+    <div class="container">
+    <div class="search-bar">
+    <input class="input" placeholder="City"></input>
+        <i class="fas fa-search"></i>
+    </div>
+    <div class="results"></div>
+    </div>
+    <script src="handlebars/dist/handlebars.js"></script>
+    <script src="jquery/dist/jquery.js"></script>
+    <script src="module.js"></script>
+    <script src="render.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
