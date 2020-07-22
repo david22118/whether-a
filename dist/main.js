@@ -30,7 +30,7 @@ const fetchsaveCity = function (data) {
    }
 
 //remove city 
-$('.results').on('click',".fa-minus-square",function(){
+$('.results').on('click',".fa-minus-circle",function(){
     const name = $(this).closest('.box').find(".name").data().id
     /* const data = module.cityData.find(c=>c.name==name)
     fetchsaveCity(data) */
